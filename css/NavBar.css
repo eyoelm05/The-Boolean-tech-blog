@@ -39,10 +39,14 @@
 }
 
 /* Search bar styles */
-.search-form{
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     background-color: var(--search-bg);
     border-radius: 5rem;
 }
+
 
 .search-input{
     border-radius: inherit;
@@ -52,6 +56,10 @@
 
 .search-button{
     color: var(--search-text);
+}
+
+.nav-search-button{
+    color: var(--color-primary);
 }
 
 /* Theme toggle styles*/
@@ -104,7 +112,26 @@
     font-size: 2rem;
     color: var(--color-primary);
 }
+
+
+
 /* Making nav bar responsive */
+
+@media (min-width: 576px) {
+    /* Re-order items if the browser is not on mobile */
+    .buttons-container{
+        order: 3;
+    }
+
+    .search-form{
+        order: 2
+    }
+
+    .nav-menu{
+        order: 4;
+    }
+}
+
 @media (min-width: 768px) {
     /* Add margin top for medium and large screens */
     .navbar{
@@ -118,7 +145,7 @@
 }
 
 @media (min-width: 992px) {
-    .buttons-container{
-        order: 2;
+    .nav-menu{
+        order: 2
     }
 }
