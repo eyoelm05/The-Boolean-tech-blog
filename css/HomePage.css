@@ -1,0 +1,14 @@
+/* CSS Reset: Removes browsers default margins and paddings */
+*{
+    margin: 0;
+    padding: 0;
+    /* Changes the way width and height are calculated
+    ** Width and height now include the padding and the border
+    */
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: var(--background);
+}
