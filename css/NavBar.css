@@ -34,6 +34,54 @@
     background-color: inherit;
     border:none
 }
+
+
+/* Theme toggle styles*/
+
+/* Used to order the toggle and hamburger menu on mobile devices */
+.buttons-container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.theme-toggle{
+    display: flex;
+    justify-content: space-between; 
+    height: fit-content;
+    background-color: var(--theme-toggle-bg);
+    border-radius: 5rem;
+    padding: 0.2rem 0.2rem;
+    gap: 0.7rem;
+    border: none;
+}
+
+/* General styles for toggle icons */
+.theme-toggle .light-icon,
+.theme-toggle .dark-icon {
+    width: 1.7rem;
+    height: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+/* Different colors for the icons */
+.theme-toggle .light-icon {
+    color: var(--color-secondary);
+}
+
+.theme-toggle .dark-icon {
+    color: var(--color-primary);
+}
+
+/* Set background color for current theme */
+.theme-toggle .current{
+    background-color: var(--theme-toggle-current-bg);
+}
+
+
 /* Making nav bar responsive */
 @media (min-width: 768px) {
     /* Add margin top for medium and large screens */
@@ -44,5 +92,11 @@
     /* Display the nav header only on medium and large screens */
     .nav-header{
         display: inline-flex;
+    }
+}
+
+@media (min-width: 992px) {
+    .buttons-container{
+        order: 2;
     }
 }

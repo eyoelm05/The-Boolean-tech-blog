@@ -13,6 +13,8 @@
   --footer-bg: #E5E9EB;
   --search-bg: #EFEFEF;
   --search-text: #6F6A6A;
+  --theme-toggle-bg: #EFEFEF;
+  --theme-toggle-current-bg: #0066A9;
 }
 
 /* Dark mode */
@@ -25,4 +27,5 @@
   --footer-bg: #000000;
   --search-bg: #021826;
   --search-text: #FFFFFF;
+  --theme-toggle-bg: #021826;
 }

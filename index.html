@@ -26,9 +26,17 @@
                 </a>
 
                 <!-- Mobile Navigation Bar: Toggle Button -->
-                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <div class="buttons-container">
+                    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Theme Toggle button -->
+                    <button id="theme-toggle" class="theme-toggle">
+                        <i id="light-icon" class="bi bi-sun light-icon"></i>
+                        <i id="dark-icon" class="bi bi-moon dark-icon"></i>
+                    </button>
+                </div>
 
                 <!-- Navigation Menu -->
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -66,5 +74,6 @@
         </nav>
     </header>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/Theme.js"></script>
 </body>
 </html>
