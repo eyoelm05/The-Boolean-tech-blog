@@ -5,6 +5,7 @@
   --color-primary: #0066A9;
   --text-primary: #000000;
   --text-accent: #6F6A6A;
+  --link-hover-color: #0066A9;
   --color-secondary: #FFFFFF;
   --badge-bg: #3D7396;
   --card-bg: #F6F6F6;
@@ -22,10 +23,9 @@
   --color-primary: #FFFFFF;
   --text-primary: #FFFFFF;
   --text-accent: #FFFFFFB2;
+  --link-hover-color: #FFFFFFB2;
   --card-bg: #021826;
   --background: #0C1019;
   --footer-bg: #000000;
-/*   --search-bg: #021826;
-  --search-text: #FFFFFF; */
   --theme-toggle-bg: #021826;
 }

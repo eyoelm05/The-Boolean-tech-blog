@@ -14,12 +14,26 @@
 }
 
 .text-color:hover{
-    color: var(--color-primary)!important;
+    color: var(--link-hover-color)!important;
 }
 
+/* Change bootstrap default colors for dropdown menu*/
+.dropdown-menu{
+    background-color: var(--background);
+    border: solid var(--color-primary);
+}
+
+.dropdown-item{
+    color: var(--text-primary);
+}
+
+.dropdown-item:hover{
+    background-color: inherit;
+    color: var(--link-hover-color);
+}
 /* Remove the flash that happens when dropdown item is clicked */
 .dropdown-item:active {
-    background-color: transparent !important;
+    background-color: inherit !important;
     color: inherit !important; 
 }
 
