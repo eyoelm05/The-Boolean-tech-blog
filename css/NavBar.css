@@ -35,6 +35,9 @@
     border:none
 }
 
+.search-button{
+    color: var(--search-text);
+}
 
 /* Theme toggle styles*/
 
