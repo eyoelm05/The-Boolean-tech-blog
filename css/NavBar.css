@@ -1,11 +1,37 @@
-.navbar{
-    margin-top: 2rem;
-}
+/* Style for the company name: The Boolean */
 .nav-header{
-    display: inline-flex;
+    display: none;
     flex-direction: column;
     font-size: 24px;
     font-weight: 700;
     line-height: 27px;
     color: var(--color-primary)
+}
+
+/* Change bootstrap default colors */
+.text-color{
+    color: var(--text-primary)!important
+}
+
+.text-color:hover{
+    color: var(--color-primary)!important;
+}
+
+/* Remove the flash that happens when dropdown item is clicked */
+.dropdown-item:active {
+    background-color: transparent !important;
+    color: inherit !important; 
+}
+
+/* Making nav bar responsive */
+@media (min-width: 768px) {
+    /* Add margin top for medium and large screens */
+    .navbar{
+        margin-top: 2rem;
+    }
+
+    /* Display the nav header only on medium and large screens */
+    .nav-header{
+        display: inline-flex;
+    }
 }
