@@ -31,6 +31,7 @@
     background-color: inherit;
     color: var(--link-hover-color);
 }
+
 /* Remove the flash that happens when dropdown item is clicked */
 .dropdown-item:active {
     background-color: inherit !important;
@@ -55,10 +56,11 @@
 
 /* Theme toggle styles*/
 
-/* Used to order the toggle and hamburger menu on mobile devices */
+/* Used to order and align the toggle and hamburger menu on mobile devices */
 .buttons-container{
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
 }
 
 .theme-toggle{
@@ -98,7 +100,10 @@
     background-color: var(--theme-toggle-current-bg);
 }
 
-
+.hamburger-icon{
+    font-size: 2rem;
+    color: var(--color-primary);
+}
 /* Making nav bar responsive */
 @media (min-width: 768px) {
     /* Add margin top for medium and large screens */
