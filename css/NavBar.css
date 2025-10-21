@@ -23,6 +23,17 @@
     color: inherit !important; 
 }
 
+/* Search bar styles */
+.search-form{
+    background-color: var(--search-bg);
+    border-radius: 5rem;
+}
+
+.search-input{
+    border-radius: inherit;
+    background-color: inherit;
+    border:none
+}
 /* Making nav bar responsive */
 @media (min-width: 768px) {
     /* Add margin top for medium and large screens */

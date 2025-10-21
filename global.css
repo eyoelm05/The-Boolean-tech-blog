@@ -11,6 +11,8 @@
   --card-border: #CDCDCD;
   --background: #FDFDFD;
   --footer-bg: #E5E9EB;
+  --search-bg: #EFEFEF;
+  --search-text: #6F6A6A;
 }
 
 /* Dark mode */
@@ -21,4 +23,6 @@
   --card-bg: #021826;
   --background: #0C1019;
   --footer-bg: #000000;
+  --search-bg: #021826;
+  --search-text: #FFFFFF;
 }
