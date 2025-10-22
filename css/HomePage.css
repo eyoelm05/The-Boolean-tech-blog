@@ -21,12 +21,15 @@ p{
 /* Carousel style */
 .main-carousel{
     margin: 2rem 1rem;
+    max-width: 530px;
 }
 
 .main-article .article-image{
     width: 100%;
     height: auto;
     margin-bottom: 0.75rem;
+    object-fit: cover;
+    max-height: 200px;
 }
 
 
@@ -84,8 +87,38 @@ p{
     height: 100%;
     margin-bottom: 0 !important;
 }
+
 .card-image{
     width: 100%;
     height: auto;
     border-radius: 1rem;
+}
+
+@media (min-width: 576px) {
+    .main-carousel{
+        margin: 2rem auto;
+        max-width: 560px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        padding: 1rem;
+    }
+    .main-carousel{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 616px;
+    }
+}
+
+@media (min-width: 992px) {
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 0.75fr;
+        padding: 1rem;
+    }
 }
