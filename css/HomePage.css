@@ -13,6 +13,11 @@ body{
     background-color: var(--background);
 }
 
+/* Reset bootstrap paragraph margins */
+p{
+    margin-bottom: 0!important;
+}
+
 /* Carousel style */
 .main-carousel{
     margin: 2rem 1rem;
@@ -36,4 +41,51 @@ body{
 
 .date{
     color: var(--text-accent);
+}
+
+/* Card Styles */
+.card-local{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    background-color: var(--card-bg);
+    border: solid 0.5px var(--card-border);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 2rem 1rem;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+.card-badge{
+    width: 9rem;
+    background-color: var(--badge-bg);
+    font-size: 16px;
+    padding: 0 1rem;
+    color: var(--color-secondary);
+    border-radius: 2rem;
+}
+
+.card-title{
+    font-size: 20px;
+}
+
+.card-description{
+    display: none;
+}
+
+.card-local .image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 0 !important;
+}
+.card-image{
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
 }
