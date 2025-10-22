@@ -12,3 +12,28 @@
 body{
     background-color: var(--background);
 }
+
+/* Carousel style */
+.main-carousel{
+    margin: 2rem 1rem;
+}
+
+.main-article .article-image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.75rem;
+}
+
+
+/* Set colors for texts */
+.title{
+    color: var(--color-primary);
+}
+
+.description{
+    color: var(--text-accent);
+}
+
+.date{
+    color: var(--text-accent);
+}
