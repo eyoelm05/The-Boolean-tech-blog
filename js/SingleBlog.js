@@ -2,6 +2,8 @@
 /* Fetch Element from DOM */
 const figureElement = document.getElementById("article-image")
 const articleElement = document.getElementById("article")
+const relatedBlogs = document.querySelector('.related-blogs')
+const relatedContentContainer = document.getElementById("related-blogs-cards")
 
 /* Get id and type from url parameters */
 const paramsString = window.location.search;
@@ -37,3 +39,31 @@ const articleHTML = `
 
 figureElement.innerHTML = figureHTML
 articleElement.innerHTML = articleHTML
+
+let cardElement;
+data.forEach((element) => {
+    if(element.category == article.category && element.id !== article.id){
+        /* Prepare card element */
+        cardElement = `
+            <a href="SingleBlog.html?id=${element.id}">
+                <section class="card-local">
+                    <section class="card-content">
+                        <p class="card-badge">${element.category}</p>
+                        <h1 class="title card-title">${element.title}</h1>
+                        <p class="description card-description">${element.shortDescription}</p>
+                        <p class="date"><time datetime="${new Date(element.date)}">${element.date}</time></p>
+                    </section>
+                    <figure class="image-container">
+                        <img src="../images/${element.image_name}" alt="${element.image_alt}" class="card-image">
+                    </figure>
+                </section>
+            </a>
+            `
+        relatedContentContainer.innerHTML += cardElement
+    }
+})
+
+/* Hide related blogs if there isn't a blog in the same category */
+if(!cardElement){
+    relatedBlogs.classList.add("hidden")
+}

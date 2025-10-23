@@ -17,7 +17,7 @@ const data = [
             Neural Processing Units represent a paradigm shift toward specialized intelligence-first computing. As AI continues to evolve, NPUs will define the hardware foundation of tomorrow’s digital world.
         `,
         date: "April 12, 2022",
-        category: "AI Hardware",
+        category: "Generative AI",
         author: "John Doe",
         image_name: "main1.jpg",
         image_alt: "Neural Processing Unit concept illustration"
@@ -63,7 +63,7 @@ const data = [
             The ethics of AI isn’t about restricting innovation — it’s about ensuring progress benefits everyone. Trustworthy AI is the foundation upon which sustainable digital transformation will stand.
         `,
         date: "February 16, 2025",
-        category: "AI Ethics",
+        category: "Generative AI",
         author: "Michael Tan",
         image_name: "main3.jpg",
         image_alt: "Abstract representation of AI ethics"
@@ -86,7 +86,7 @@ const data = [
             Edge intelligence represents the evolution of AI infrastructure — enabling smarter, faster, and more privacy-preserving applications.
         `,
         date: "September 14, 2024",
-        category: "AI Infrastructure",
+        category: "Generative AI",
         author: "Ava Patel",
         image_name: "main4.jpg",
         image_alt: "Edge computing architecture diagram"
@@ -178,7 +178,7 @@ const data = [
             While not a panacea, AI is an indispensable instrument in the climate scientist’s toolkit — accelerating insights that inform mitigation and adaptation strategies.
         `,
         date: "August 2, 2025",
-        category: "Environmental Tech",
+        category: "Generative AI",
         author: "David Lee",
         image_name: "trending2.jpg",
         image_alt: "Climate AI data map"
@@ -293,7 +293,7 @@ const data = [
             Effective regulation will depend on cross-border cooperation and industry standards. The technical community must remain engaged to ensure policies are informed by realistic engineering constraints.
         `,
         date: "October 20, 2025",
-        category: "Policy",
+        category: "Generative AI",
         author: "Nina Clarke",
         image_name: "latest1.jpg",
         image_alt: "Legislative gavel and AI icon"
@@ -316,7 +316,7 @@ const data = [
             Faster-charging batteries could accelerate EV adoption and reshape consumer expectations for portable devices, impacting energy infrastructure and usage patterns.
         `,
         date: "October 19, 2025",
-        category: "Materials Science",
+        category: "Hardware Engineering",
         author: "Omar Yusuf",
         image_name: "latest2.jpg",
         image_alt: "Battery cell close-up"
@@ -339,7 +339,7 @@ const data = [
             Emotional AI shows promise in mental health support, customer service escalation, and education — domains where empathetic interactions can materially improve outcomes.
         `,
         date: "October 18, 2025",
-        category: "Human-Computer Interaction",
+        category: "Generative AI",
         author: "Sophia Nguyen",
         image_name: "latest3.jpg",
         image_alt: "Conversational AI interface"
