@@ -1,0 +1,146 @@
+/* Footer Styles */
+.footer{
+    background-color: var(--footer-bg);
+    padding: 2.5rem 1rem;
+    margin-top: 3rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  "company company"
+  "navigation categories"
+  "socials socials";
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-company {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  grid-area: company;
+}
+
+.footer-header{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    color: var(--color-primary);
+}
+
+.footer-brand{
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.footer-description {
+  max-width: 280px;
+  color: var(--text-accent);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Link sections */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.navigation-links {
+    grid-area: navigation;
+}
+
+.categories{
+    grid-area: categories;
+}
+
+.footer-title {
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* Social section */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  grid-area: socials;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--link-hover-color);
+  transform: translateY(-3px);
+}
+
+/* Divider */
+.footer-divider {
+  width: 90%;
+  height: 2px;
+  background-color: var(--text-accent);
+  border: none;
+  margin: 2rem auto;
+  grid-area: hr;
+}
+
+/* Copyright */
+.footer-copy {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-accent);
+}
+
+/* Responsive layout */
+@media (min-width: 576px) {
+    .footer-container{
+        grid-template-areas: 
+        "company navigation"
+        "categories socials";
+    }
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+        "company navigation categories socials";
+    }
+
+    .footer-description {
+        max-width: 350px;
+    }
+
+    .footer {
+        padding: 3rem 2rem 1rem;
+    }
+}
