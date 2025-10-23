@@ -140,6 +140,12 @@ p{
     grid-area: latest;
 }
 
+.latest .card-badge{
+    white-space: nowrap;
+}
+.latest a{
+    text-decoration: none;
+}
 @media (min-width: 576px) {
     .main-carousel{
         margin: 2rem auto;
