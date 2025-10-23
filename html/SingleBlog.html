@@ -83,42 +83,11 @@
     </header>
     <main class="main">
         <!-- Article Image -->
-        <figure>
-            <img src="../images/News1.jpg" alt="News 1 Image" class="news-image">
+        <figure id="article-image">
         </figure>
 
         <!-- Article Headline -->
-        <article class="article">
-            <section class="headline">
-                <p class="date"><time datetime="2022-04-12">April 12, 2022</time></p>
-                <h1 class="title">Exploring The Future of Neural Processing Units</h1>
-                <p class="description">An in-depth look at AI advancements and what they mean for the future.</p>
-                <p class="description">Written by: John Doe</p>
-            </section>
-
-            <!-- Article Content -->
-            <section class="article-content">
-                <p class="article-text">
-                    In recent years, the explosive growth of artificial intelligence has transformed how we think about computing. At the heart of this transformation lies a new class of hardware designed specifically for machine learning tasks — Neural Processing Units (NPUs). As we move into an era where AI models power everything from smartphones to self-driving cars, NPUs are becoming the backbone of efficient, intelligent computing. But what exactly are NPUs, and where are they headed?
-
-                    Understanding Neural Processing Units
-                    A Neural Processing Unit is a specialized microprocessor optimized for neural network workloads. Unlike traditional CPUs (Central Processing Units) or GPUs (Graphics Processing Units), NPUs are purpose-built to handle the massive parallelism and matrix computations that AI algorithms demand. They excel at tasks such as pattern recognition, computer vision, and natural language processing — the very operations that drive modern AI.
-
-                    By focusing on low-precision arithmetic and parallel data flows, NPUs deliver dramatically higher performance per watt compared to conventional chips. This efficiency is key to enabling AI on edge devices like smartphones, cameras, and IoT sensors, where power consumption and latency are critical.
-                    The Evolution of AI Hardware
-                    The journey to NPUs began with GPUs, which were initially repurposed to accelerate AI due to their ability to perform many calculations simultaneously. However, as AI models grew larger and more complex, it became clear that even GPUs weren’t fully optimized for these workloads. This led to the rise of dedicated AI accelerators — including NPUs, Tensor Processing Units (TPUs), and custom AI chips from major players like Apple, Google, and Huawei.
-                    Modern NPUs are now being integrated into consumer devices, enabling on-device AI processing without relying solely on cloud infrastructure. This shift enhances user privacy, reduces latency, and improves responsiveness.
-                    Key Innovations Driving the Future
-                    The next generation of NPUs is set to push the boundaries of what’s possible in AI computing. Several trends are shaping this evolution:
-                    Heterogeneous Computing Architectures – Future systems will increasingly combine CPUs, GPUs, NPUs, and even quantum cores in unified architectures, dynamically allocating tasks to the most efficient processor.
-                    Smarter Power Management – Advanced energy-saving techniques will allow NPUs to run high-performance AI models even on battery-powered devices.
-                    AI Model Compression and Adaptivity – Techniques such as pruning, quantization, and adaptive computation will make NPUs more versatile and efficient.
-                    Edge-to-Cloud Collaboration – NPUs will play a vital role in distributed AI systems, handling local inference while communicating with cloud-based models for complex tasks.
-
-                    Conclusion
-                    Neural Processing Units represent a defining step in the evolution of computing — a shift from general-purpose processors to intelligence-first architectures. As AI continues to weave itself into the fabric of everyday life, NPUs will ensure that intelligence happens everywhere: from the cloud to the edge, and from the lab to our pockets. The future of NPUs is not just about faster chips — it’s about a smarter, more connected world.
-                </p>
-            </section>
+        <article id="article" class="article">
         </article>
 
          <section class="related-blogs">
@@ -219,5 +188,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="../js/Theme.js"></script>
     <script src="../js/SearchBar.js"></script>
+    <script src="../data.js"></script>
+    <script src="../js/SingleBlog.js"></script>
 </body>
 </html>

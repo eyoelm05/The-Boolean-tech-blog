@@ -7,12 +7,14 @@ data.forEach((element, index) => {
     if(element.type === "main"){
         /* Prepare article element */
         const articleElement = `
-            <article class="carousel-item ${index === 0 ? "active" : ""} main-article">
-                <img src="images/${element.image_name}" alt="${element.image_alt}" class="article-image">
-                <h1 class="title">${element.title}</h1>
-                <p class="description">${element.shortDescription}</p>
-                <p class="date"><time datetime="2022-04-12">${element.date}</time></p>
-            </article>
+            <a href="html/SingleBlog.html?id=${element.id}">
+                <article class="carousel-item ${index === 0 ? "active" : ""} main-article">
+                    <img src="images/${element.image_name}" alt="${element.image_alt}" class="article-image">
+                    <h1 class="title">${element.title}</h1>
+                    <p class="description">${element.shortDescription}</p>
+                    <p class="date"><time datetime="2022-04-12">${element.date}</time></p>
+                </article>
+            </a>
         `
 
         carouselContainer.innerHTML += articleElement;
