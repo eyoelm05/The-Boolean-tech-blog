@@ -21,3 +21,47 @@ body{
 p{
     margin-bottom: 0!important;
 }
+
+
+.main{
+    margin: 2rem 0.5rem
+}
+
+/* Resize image */
+.news-image{
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.75rem;
+    object-fit: cover;
+}
+
+/* Set colors for texts */
+.title{
+    color: var(--color-primary);
+}
+
+.description{
+    color: var(--text-accent);
+}
+
+.date{
+    color: var(--text-accent);
+}
+
+.article-text{
+    color: var(--text-primary);
+    white-space: pre-line;
+}
+
+/* Styling Headline */
+.headline{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.article-content{
+    margin-top: 1rem;
+    font-size: 20px;
+    padding: 1rem;
+}
