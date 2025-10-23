@@ -53,6 +53,7 @@ p{
     gap: 1rem;
     margin: 1rem 0.75rem;
     justify-self: center;
+    grid-area: trending;
 }
 
 .cards{
@@ -116,6 +117,26 @@ p{
     aspect-ratio: 1/1;
 }
 
+/* Line between trending and latest */
+.hr {
+  width: 90%;
+  height: 2px;
+  background-color: var(--text-accent);
+  border: none;
+  margin: 2rem auto;
+  grid-area: hr;
+}
+
+/* Style for latest */
+.latest{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 0 0.75rem;
+    justify-self: center;
+    grid-area: latest;
+}
+
 @media (min-width: 576px) {
     .main-carousel{
         margin: 2rem auto;
@@ -152,6 +173,10 @@ p{
     .main{
         display: grid;
         grid-template-columns: 1fr 0.5fr;
+        grid-template-areas: 
+        "carousel trending"
+        "hr hr"
+        "latest latest";
         padding: 1rem;
         gap: 1rem
     }
@@ -162,44 +187,61 @@ p{
         align-items: center;
         max-width: 616px;
         height: 100%;
+        grid-area: carousel;
     }
 
-    .cards{
+    .trending .cards{
         max-height: 560px;
         overflow-y: scroll;
         scrollbar-color: var(--color-primary) transparent;
         scrollbar-width: thin;
     }
 
-    .card-local{
+    /* Apply the following only for cards inside trending */
+    .trending .card-local{
         grid-template-columns: 1fr 70px;
         max-width: 420px;
         height: fit-content;;
     }
 
-    .card-badge{
+    .trending .card-badge{
         display: none;
     }
 
-    .card-title{
+    .trending .card-title{
         font-size: 16px;
     }
 
-    .card-description{
-        display: none;
-    }
-
-    .card-local .image-container{
+    .trending .card-local .image-container{
         height: auto;
         padding: 0;
         align-self: flex-end;
+    }
+
+
+    .latest{
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "title title";
+        margin: 0;
+        justify-self: center;
+    }
+
+    /* Apply this for cards inside latest */
+    .latest .title{
+        grid-area: title;
+    }
+
+    /* Apply this for both latest and trending */
+    .card-description{
+        display: none;
     }
 }
 
 @media (min-width: 992px) {
     .main{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 0.75fr;
         padding: 1rem;
         max-width: 632;
     }
@@ -211,26 +253,33 @@ p{
     .cards{
         gap: 1.5rem;
     }
-    .card-local{
+
+    /* Reverse actions taken on trending section */
+    .trending .card-local{
         grid-template-columns: 1fr 0.5fr;
         max-width: 638px;
     }
 
-    .card-badge{
+    .trending .card-badge{
         display: block;
     }
 
-    .card-title{
+    .trending .card-title{
         font-size: 20px;
     }
+
     .card-description{
         display: block;
     }
-    .card-local .image-container{
+
+    .trending .card-local .image-container{
         height: 100%;
         padding: 1rem;
     }
 
+    .latest .card-local{
+        max-width: 628px;
+    }
     .card-image{
         max-width: 140px;
     }
