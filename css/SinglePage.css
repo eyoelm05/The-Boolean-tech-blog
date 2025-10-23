@@ -24,15 +24,15 @@ p{
 
 
 .main{
-    margin: 2rem 0.5rem
+    margin: 2rem 0.75rem;
 }
 
 /* Resize image */
 .news-image{
     width: 100%;
     height: auto;
-    margin-bottom: 0.75rem;
     object-fit: cover;
+    grid-area: image;
 }
 
 /* Set colors for texts */
@@ -48,9 +48,15 @@ p{
     color: var(--text-accent);
 }
 
-.article-text{
-    color: var(--text-primary);
-    white-space: pre-line;
+.article{
+    margin-top: 0.75rem;
+    grid-area: article;
+}
+
+.article-content{
+    margin-top: 1rem;
+    font-size: 20px;
+    padding: 0.5rem;
 }
 
 /* Styling Headline */
@@ -60,18 +66,19 @@ p{
     gap: 0.75rem;
 }
 
-.article-content{
-    margin-top: 1rem;
-    font-size: 20px;
-    padding: 1rem;
+.article-text{
+    color: var(--text-primary);
+    white-space: pre-line;
 }
 
-/* Related content styles */
+/* Trending Section styles */
 .related-blogs{
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 1rem;
-    margin: 1rem 0.75rem;
+    margin: 1rem 0rem;
+    grid-area: related-blogs;
 }
 
 .cards{
@@ -133,4 +140,50 @@ p{
     border-radius: 0.5rem;
     /* Makes sure the image is a square at all times */
     aspect-ratio: 1/1;
+}
+
+@media (min-width: 576px) {
+    .main{
+        padding: 2rem 2rem;
+    }
+    .card-local{
+        grid-template-columns: 1fr 0.5fr;
+        max-width: 560px;
+    }
+
+    .card-badge{
+        font-size: 14px;
+    }
+
+    .card-title{
+        font-size: 20px;
+    }
+
+    .card-description{
+        display: block;
+    }
+
+    .card-local .image-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        grid-template-areas: 
+        "article image"
+        "article related-blogs";
+        gap: 1rem;
+    }
+
+    .cards{
+        margin-left: 1rem;
+    }
 }
