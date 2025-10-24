@@ -5,7 +5,7 @@
     font-size: 24px;
     font-weight: 700;
     line-height: 27px;
-    color: var(--color-primary)
+    color: var(--color-primary);
 }
 
 /* Change bootstrap default colors */
@@ -15,6 +15,10 @@
 
 .text-color:hover{
     color: var(--link-hover-color)!important;
+}
+
+.nav-menu{
+    text-align: right;
 }
 
 /* Change bootstrap default colors for dropdown menu*/
