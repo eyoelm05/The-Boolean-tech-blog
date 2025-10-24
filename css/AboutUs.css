@@ -64,12 +64,86 @@
     max-width: 250px;
 }
 
+/* Team Section */
+.team-section{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.team-section .title {
+    text-align: center;
+}
+
+.team-cards{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.team-card {
+    width: 100%;
+    background-color: var(--card-bg);
+    max-width: 400px;
+    border: solid 0.5px var(--card-border);
+    border-radius: 0.75rem;
+    overflow: hidden;
+    text-align: center;
+}
+
+.team-card .image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-card .texts {
+    padding: 1.5rem;
+}
+
+.team-card .title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.team-card .role {
+    font-size: 1rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
 /* Make it responsive */
 @media (min-width: 768px) {
     .our-mission{
         margin: 2rem 1rem;
     }
+
     .mission-container{
         flex-direction: row;
+    }
+
+    .team-cards{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Select the 3rd card and make it span two columns */
+    .team-card:nth-child(3) {
+        grid-column: 1 / span 2; /* Start at grid line 1 and span 2 columns */
+        justify-self: center;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .team-cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Reverse the column span for 3rd card */
+    .team-card:nth-child(3){
+        grid-column: auto;
     }
 }
