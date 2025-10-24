@@ -19,6 +19,7 @@
 
 .nav-menu{
     text-align: right;
+    order: 2;
 }
 
 /* Change bootstrap default colors for dropdown menu*/
@@ -43,6 +44,9 @@
 }
 
 /* Search bar styles */
+.search-form{   
+    order: 1;
+}
 .search-bar {
     display: flex;
     align-items: center;

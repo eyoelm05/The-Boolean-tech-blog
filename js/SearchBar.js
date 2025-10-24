@@ -1,6 +1,7 @@
 /* Get the search bar and search toggle button element by its ID */
 const searchBar = document.getElementById('searchBar');
 const searchToggleButton = document.getElementById('search-toggle')
+const hamBurgerMenu = document.querySelector('.navbar-toggler')
 
 /* Listen for a click anywhere on the document */
 document.addEventListener('click', function(event) {
@@ -16,7 +17,23 @@ document.addEventListener('click', function(event) {
     const isClickInsideSearch = searchBar.contains(event.target);
     const isClickOnToggle = searchToggleButton.contains(event.target);
 
+    /* Check if the click was on hamburger Menu */
+    const isClickOnHamburgerMenu = hamBurgerMenu.contains(event.target);
+
+    /*
+    * Check if the menu was open when clicked 
+    * if aria-expanded = false : the menu is expanded
+    * if aria-expanded = true : the menu is not open
+    * This is because bootstraps click event runs before this javascript
+    */
+    const isMenuExpanded = hamBurgerMenu.getAttribute("aria-expanded") === "false";
+
     if (isSearchOpen && !isClickInsideSearch && !isClickOnToggle) {
-        searchCollapseInstance.hide();
+        /* If hamburger clicked and menu is not expanded do nothing */
+        if(isClickOnHamburgerMenu && !isMenuExpanded){
+            return null;
+        }else{
+            searchCollapseInstance.hide();
+        }
     }
 });
