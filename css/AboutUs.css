@@ -1,0 +1,19 @@
+/* About Us Page Css */
+.main{
+    margin: 2rem 1rem;
+}
+
+/* About Page Header */
+.about-header{
+    text-align: center;
+}
+.about-header .title {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.about-header .description {
+    color: var(--text-accent);
+    max-width: 600px;
+    margin: 0 auto;
+}
