@@ -4,6 +4,11 @@
     margin: 2rem 0;
     max-width: 530px;
 }
+
+.main-carousel .control-icon{
+    color: var(--text-primary);
+    font-size: 2rem;
+}
 .carousel-control-prev, .carousel-control-next{
     width: auto;
 }
