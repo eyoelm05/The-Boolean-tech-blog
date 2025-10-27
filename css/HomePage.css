@@ -1,9 +1,15 @@
 /* Carousel style */
-.main-carousel{
-    margin: 2rem 1rem;
+.main-carousel{ 
+    justify-self: center;
+    margin: 2rem 0;
     max-width: 530px;
 }
-
+.carousel-control-prev, .carousel-control-next{
+    width: auto;
+}
+.carousel-inner{
+    padding: 0 2.5rem;
+}
 .main-article .article-image{
     width: 100%;
     height: auto;
@@ -180,7 +186,7 @@
     }
 
     .trending .cards{
-        max-height: 560px;
+        max-height: 400px;
         overflow-y: scroll;
         scrollbar-color: var(--color-primary) transparent;
         scrollbar-width: thin;
@@ -190,7 +196,7 @@
     .trending .card-local{
         grid-template-columns: 1fr 70px;
         max-width: 420px;
-        height: fit-content;;
+        height: fit-content;
     }
 
     .trending .card-badge{
@@ -232,7 +238,10 @@
         display: grid;
         grid-template-columns: 1fr 0.75fr;
         padding: 1rem;
-        max-width: 632;
+    }
+
+    .main-carousel{
+        max-width: 800px;
     }
 
     .trending{
