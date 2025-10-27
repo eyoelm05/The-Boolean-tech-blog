@@ -1,9 +1,11 @@
 /* This javascript is used to display dynamic data */
 /* Fetch Element from DOM */
 const carouselContainer = document.getElementById('carousel-inner');
+const carouselIndicators = document.getElementById('carousel-indicators');
 const trendingContainer = document.getElementById('trending-cards');
 const latestContainer = document.getElementById('latest-cards');
 
+let carouselCount = 0;
 /* Loop over items in main and add them to the carousel Container */
 data.forEach((element, index) => {
     if(element.type === "main"){
@@ -19,10 +21,15 @@ data.forEach((element, index) => {
             </a>
         `
 
+        const carouselIndicatorHTML = `
+            <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="${carouselCount}" class="${carouselCount === 0 ? "active" : ""}" aria-current="${carouselCount === 0}" aria-label="Slide ${carouselCount+1}"></button>
+        `
         carouselContainer.innerHTML += articleElement;
+        carouselIndicators.innerHTML += carouselIndicatorHTML;
+        carouselCount += 1;
     }
 });
-
+console.log(carouselIndicators)
 
 data.forEach((element) => {
     if(element.type === "trending"){

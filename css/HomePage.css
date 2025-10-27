@@ -13,8 +13,17 @@
     width: auto;
 }
 .carousel-inner{
-    padding: 0 2.5rem;
+    padding: 1rem 2.5rem;
 }
+
+.carousel-indicators{
+    margin-bottom: -0.5rem;
+}
+
+.carousel-indicators button{
+    background-color: var(--color-primary)!important;
+}
+
 .main-article .article-image{
     width: 100%;
     height: auto;
