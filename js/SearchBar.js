@@ -1,3 +1,6 @@
+
+/* Search Bar Toggle */
+
 /* Get the search bar and search toggle button element by its ID */
 const searchBar = document.getElementById('searchBar');
 const searchToggleButton = document.getElementById('search-toggle')
@@ -36,4 +39,14 @@ document.addEventListener('click', function(event) {
             searchCollapseInstance.hide();
         }
     }
+});
+
+
+/* Search Bar functionality */
+
+searchBar.addEventListener('submit', (event) => {
+    event.preventDefault(); /* Cancels submit event */
+    const inputValue = document.getElementById('searchInput').value
+    
+    window.location.href = `/html/Search.html?search=${inputValue}`
 });

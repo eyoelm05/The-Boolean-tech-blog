@@ -37,6 +37,10 @@
     border-bottom: 2px solid var(--text-accent);
 }
 
+.results a{
+    text-decoration: none;
+}
+
 /* Card styling */
 .card-local {
     display: flex;
@@ -94,7 +98,36 @@
     flex-grow: 1;
 }
 
+/* Not Found Message */
+.not-found-container {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    grid-column: 1 / -1; 
+}
 
+.not-found-message {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.not-found-link {
+    display: inline-block;
+    padding: 0.6rem 1.25rem;
+    background-color: var(--button-bg);
+    color: var(--color-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    transition: filter 0.3s ease;
+}
+
+.not-found-link:hover {
+    filter: brightness(0.9);
+}
 /* Responsive design */
 @media (min-width: 576px) {
     .card-local {
