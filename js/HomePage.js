@@ -29,7 +29,6 @@ data.forEach((element, index) => {
         carouselCount += 1;
     }
 });
-console.log(carouselIndicators)
 
 data.forEach((element) => {
     if(element.type === "trending"){
