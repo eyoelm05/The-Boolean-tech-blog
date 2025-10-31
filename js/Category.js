@@ -64,7 +64,7 @@ function loadPage(){
     categoriesHTML += itemsListHTML;
 
     /* Append the prepared html to the container */
-    categoryContainer.innerHTML += categoriesHTML
+    categoryContainer.innerHTML = categoriesHTML
 }
 
 /* Load the page once html has loaded */
