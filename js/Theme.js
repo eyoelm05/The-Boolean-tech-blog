@@ -53,16 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
     /* Get theme from local storage */
     const theme = localStorage.getItem('theme') || "";
 
-    /* Check if theme is dark theme from local storage 
-     * Or Check if user has set dark mode as preferred state on their browser
-     */
-    if( theme === "dark" 
-        || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ){
-        setDark()
+    /* Check if theme exists in local storage */
+    if(theme){
+        /* If theme exists in local storage use it to decide light mode or dark mode */
+        theme === "dark" ? setDark() : setLight()
     }else{
-        setLight()
+        /* If theme doesn't exist check the browsers preferred colour scheme */
+        if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+            setDark()
+        }else{
+            setLight()
+        }
     }
+    
     /* Select toggle button from DOM */
     const toggleButton = document.getElementById("theme-toggle");
 
