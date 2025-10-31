@@ -42,7 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-
     /* Search Bar functionality */
 
     searchBar.addEventListener('submit', (event) => {
