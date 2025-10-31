@@ -15,6 +15,7 @@ body{
     justify-content: space-between;
     background-color: var(--background);
     height: 100vh;
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 /* Reset bootstrap paragraph margins */
